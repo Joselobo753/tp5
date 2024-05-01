@@ -30,14 +30,37 @@ function empezar() {
   console.log(numeroAleatorio)
   const eje1 = document.querySelector("#Ejercicio1");
   eje1.innerHTML = "";
-  let etiquetas1 = /* html*/ `<form>
+  let formulario = document.createElement("form")
+  formulario.id ="formulario"
+  let etiquetas1 = /* html*/ `
   <div >
     <label >Ingresa el número misterioso</label>
     <input type="text" id="numeroMisterioso" placeholder="Número misterioso">
   </div>
-  <button type="submit" class="btn btn-primary">Cebar? 🧉</button>
-  </form>  `;
-  eje1.innerHTML = etiquetas1
+  <button type="Submit" class="btn btn-primary" id="cebar">Cebar? 🧉</button>
+    `;
+  formulario.innerHTML = etiquetas1
+  eje1.append(formulario)
+
+  const adivinar = (event) =>{
+  event.preventDefault()
+    let numero = document.querySelector("#numeroMisterioso").value
+    if (numero===numeroAleatorio) {
+      alert("Acertaste")
+    } else if(numero>numeroAleatorio){
+      alert("Tu numero es mayor al Numero misterioso")
+    }else{
+      alert("Tu numero es menor al Numero misterioso")
+    }
+  }
+
+
+
+document.querySelector("#formulario").addEventListener("Submit",adivinar)
+  
+  
+
 }
 
-document.getElementById("btn1").addEventListener("click", empezar);
+ document.getElementById("btn1").addEventListener("click", empezar);
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="Jose Lobo 98i" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <title>Trabajo practico N5</title>
+  </head>
+  <body>
+    <section class="row">
+    <article class="container col-sm-8">
+      <div >
+        <div id="panel"></div>
+        <div class="position-absolute bottom-0 end-0 p-3">
+        <button
+          type="button"
+          class="btn btn-success"
+          data-bs-toggle="modal"
+          data-bs-target="#agregarTarea"
+           
+        >
+          ➕
+        </button>
+        </div>
+        <div
+          class="modal fade"
+          id="agregarTarea"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Suma una tarea al repositorio
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <form id="formulario">
+              <div class="modal-body">
+                <div class="mb-3">
+                  
+                  <label for="formTitulo" class="form-label" id="formularioTitulo">Titulo</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="formTitulo"
+                    placeholder="Un titulo decente porfavor!"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="formTarea" class="form-label"
+                    >La tarea a agreagar</label
+                  >
+                  <textarea class="form-control" id="formTarea" rows="3" >hola soy un texto</textarea>
+                </div>
+              
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  Meee tanto ?? 😥
+                </button>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="cuerpo" class="container">
+        
+      </div>
+    </article>
+    <article class="container col-sm-4">
+      <div id="reloj">
+        
+      </div>
+    </article>
+  </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./js/eje3.js"></script>
+    <script type="module" src="./js/reloj.js"></script>
+  </body>
+</html>
