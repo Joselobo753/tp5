@@ -13,6 +13,9 @@
     <title>Trabajo practico N5</title>
   </head>
   <body>
+    <header class="container text-center py-5 bg-light">
+      <h1>Trabajo n°6 Jose Lobo</h1>
+    </header>
     <section class="row">
     <article class="container col-sm-8">
       <div >
@@ -62,7 +65,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="formTarea" class="form-label"
-                    >La tarea a agreagar</label
+                    >La tarea a agregar</label
                   >
                   <textarea class="form-control" id="formTarea" rows="3" >hola soy un texto</textarea>
                 </div>
@@ -90,10 +93,12 @@
         
       </div>
     </article>
-    <article class="container col-sm-4">
-      <div id="reloj">
-        
-      </div>
+    <article class="container col-sm-4 text-aling-center">
+      <div id="reloj"></div>
+      <div id="cronometro"><button type="button" id="iniciar" class="btn btn-success">Iniciar cronometro</button>
+      <div id="detener"></div></div>
+      <div id="temporizador"><input type="number" id="tempo" pattern="\d*" maxlength="5" >
+      <button id="inciarTempo" class="btn btn-success">Iniciar 🥰</button><div id="tiempo">00:00</div></div>
     </article>
   </section>
     <script
@@ -102,6 +107,8 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="./js/eje3.js"></script>
-    <script type="module" src="./js/reloj.js"></script>
+    <script type="module" src="./js/eje4.js"></script>
+    <script type="module" src="./js/eje5.js"></script>
+    <script type="module" src="./js/eje6.js"></script>
   </body>
 </html>

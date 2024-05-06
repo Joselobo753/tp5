@@ -1,7 +1,5 @@
 const reloj = document.getElementById("reloj");
 setInterval(() => {
-  
-  console.log(reloj);
   const time = new Date();
 
   const diasSemana = [
@@ -27,21 +25,23 @@ setInterval(() => {
     "noviembre",
     "diciembre",
   ];
-
+  reloj.innerHTML = "";
   const diaSemana = diasSemana[time.getDay()];
   const diaMes = time.getDate();
   const mes = meses[time.getMonth()];
   const año = time.getFullYear();
-  const divFechas = document.createElement("div")
-  divFechas.innerHTML = `${diaSemana} ${diaMes} de ${mes} del ${año}`
-  let fecha = diaSemana + " " + diaMes + " de " + mes + " del " + año;
-  console.log(fecha);
-  const hora = time.getHours()
-  const minutos = time.getMinutes()
-  const segundos = time.getSeconds()
-  const relojTiempo = document.createElement("div")
-  relojTiempo.innerHTML = `${hora} ${minutos} ${segundos}`
-  reloj.append(divFechas)
-  reloj.append(relojTiempo)
-  
+  const divFechas = document.createElement("div");
+
+  divFechas.innerHTML = `${diaSemana} ${diaMes} de ${mes} del ${año}`;
+
+  const hora = time.getHours();
+  const minutos = time.getMinutes();
+  const segundos = time.getSeconds();
+  const relojTiempo = document.createElement("div");
+  reloj.classList.add("card-body", "p-2", "text-warning-emphasis");
+
+  relojTiempo.innerHTML = `${hora} ${minutos} ${segundos}`;
+  reloj.append(divFechas);
+  reloj.append(relojTiempo);
+  reloj.classList.add("text-primary");
 }, 1000);
